@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-:root {
+.dark-theme {
   --body-color: #efefef;
   --nav-color: #c3b1e1;
   --bg-color: #fff;
@@ -14,7 +14,7 @@
   --a-shortcut-color: #626262;
 }
 
-.dark-theme {
+:root {
   --body-color: #121212;
   --nav-color: #1f1b24;
   --bg-color: #1f1b24;
@@ -434,6 +434,7 @@ nav {
 .post-profile-icon {
   display: flex;
   align-items: center;
+  margin-top: 5px;
 }
 .post-profile-icon p:hover {
   text-decoration: underline;
@@ -532,7 +533,7 @@ nav {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: #ccc;
+  background: #0a0a0a;
   width: 45px;
   border-radius: 15px;
   padding: 2px 3px;
@@ -551,16 +552,41 @@ nav {
 
 #dark-btn.dark-btn-on {
   padding-left: 23px;
-  background: #0a0a0a;
+  background: #ccc;
+}
+/*-------------------- Like button ------------------*/
+
+.like-button {
+  background-image: url(/images/like.png);
+  box-sizing: border-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 18px;
+  align-items: center;
+}
+#likeBtn {
+  cursor: pointer;
+}
+.post-icon-wrapper p {
+  display: flex;
+  margin-left: 30px;
 }
 
 /*-------------------- COMMENT ----------------------*/
-
+#writeComment {
+  display: none;
+}
 .write-comment {
   width: 100%;
-  height: 40px;
+  height: 60px;
   display: flex;
+  flex-direction: column;
   margin-top: 10px;
+}
+
+.write-comment-wrapper {
+  display: inline-flex;
+  height: fit-content;
 }
 
 .comment-user-profile {
@@ -577,7 +603,7 @@ nav {
   background: #efefef;
   width: 100%;
   border-radius: 20px;
-  display: inline-block;
+  display: flex;
   align-items: center;
   margin: auto;
 }
@@ -627,7 +653,7 @@ nav {
 .posted-comments {
   display: flex;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 7%;
   height: fit-content;
   position: relative;
 }
@@ -730,5 +756,9 @@ nav {
   }
   .activity-icons div {
     margin-right: 10px;
+  }
+  /* Comment section */
+  .mobile-comments {
+    display: none;
   }
 }

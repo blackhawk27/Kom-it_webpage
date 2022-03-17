@@ -21,8 +21,8 @@ darkBtn.onclick = function(){
     document.body.classList.toggle("dark-theme");
 
     // update mode
-    if(localStorage.getItem("theme") == "light"){
-        localStorage.setItem("theme", "dark");
+    if(localStorage.getItem("theme") == "dark"){
+        localStorage.setItem("theme", "light");
         dmImg1.style.backgroundImage = "url(/images/news-darkmode.png)";
         dmImg2.style.backgroundImage = "url(/images/friends-darkmode.png)";
         dmImg3.style.backgroundImage = "url(/images/group-darkmode.png)";
@@ -30,24 +30,44 @@ darkBtn.onclick = function(){
         
     }
     else{
-        localStorage.setItem("theme", "light");
+        localStorage.setItem("theme", "dark");
         dmImg1.style.backgroundImage = "url(/images/news.png)";
         dmImg2.style.backgroundImage = "url(/images/friends.png)";
         dmImg3.style.backgroundImage = "url(/images/group.png)";
         dmImg4.style.backgroundImage = "url(/images/watch.png)";
     }
 
-    /*
-    if (dmImg1.style.backgroundImage == "url(/images/news.png)") {
-      dmImg1.style.backgroundImage = "url(/images/news-darkmode.png)";
-    } 
-    else {
-      dmImg1.style.backgroundImage = "url(/images/news.png)";
-    }
-    */
-
 
 }
+
+let likeValue = document.getElementById("likeValue");
+let likeCount = 4;
+let setValue = likeValue.innerHTML = likeCount;
+
+let likeBtn = document.getElementById("likeBtn");
+let images = ["/images/like.png", "/images/like-blue.png"];
+let index = 2;
+
+
+likeBtn.onclick = function(){
+  console.log("function called");
+  
+  if(index == images.length){
+    index = 0;
+    likeBtn.style.backgroundImage = "url("+images[1]+")";
+    likeCount += 1;
+    setValue = likeValue.innerHTML = likeCount;
+  }
+  else{
+    index = images.length;
+    likeBtn.style.backgroundImage = "url("+images[0]+")";
+    likeCount -= 1;
+    setValue = likeValue.innerHTML = likeCount;
+  }
+  
+
+}
+
 
 
 // remains in darkmode if refreshed
@@ -78,13 +98,28 @@ document.querySelector('#txtSearch').addEventListener('keypress', function (e) {
 let c = document.getElementById("postedComment").children;
 // returns 2 elements because of 2 comments with class posted-comments
 
+let comments = document.getElementById("postedComment");
+let input = document.getElementById("writeComment");
+
 function showComments(){
-    let comments = document.getElementById("postedComment");
     
     if (comments.style.display === "none") {
       comments.style.display = "block";
-    } else {
+    } 
+    else {
       comments.style.display = "none";
     }
 }
 
+function showCommentInput(){
+  
+  
+  if (input.style.display === "none") {
+    input.style.display = "flex";
+  } 
+  else {
+    input.style.display = "none";
+    comments.style.display = "none";
+
+  }
+}

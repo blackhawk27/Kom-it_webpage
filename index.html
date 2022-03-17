@@ -177,24 +177,35 @@
 
                 <div class="post-row">
                     <div class="activity-icons">
-                        <div><img src="images/like-blue.png"> 120</div>
-                        <div class="show-comments" id="showCommentsIcon" onclick="showComments()"><img src="images/comments.png"> 2</div>
+                        <div class="post-icon-wrapper">
+                            <div class="like-button" id="likeBtn">
+                                <p id="likeValue"></p>
+                            </div>
+                        </div>
+
+                        <div class="show-comments" id="showCommentsIcon" onclick="showCommentInput()"><img src="images/comments.png"> 2</div>
                         <div><img src="images/share.png"> 20</div>
+                    </div>
+                    <div class="post-profile-icon mobile-comments">
+                        <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
+                    </div>
+                    
+                </div>
+                <div class="write-comment" id="writeComment">
+                    <div class="write-comment-wrapper">
+                        <div class="comment-user-profile">
+                            <div class="online-comment">
+                                <div class="online">
+                                    <img src="images/profile-pic.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="write-comment-box">
+                            <input type="text" placeholder="Comment...">
+                        </div>
                     </div>
                     <div class="post-profile-icon">
                         <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
-                    </div>
-                </div>
-                <div class="write-comment">
-                    <div class="comment-user-profile">
-                        <div class="online-comment">
-                            <div class="online">
-                                <img src="images/profile-pic.png">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="write-comment-box">
-                        <input type="text" placeholder="Comment...">
                     </div>
                     
                 </div>
@@ -276,16 +287,21 @@
                         <p onclick="showComments()">All Comments</p> <i class="fas fa-caret-down"></i>
                     </div>
                 </div>
-                <div class="write-comment">
-                    <div class="comment-user-profile">
-                        <div class="online-comment">
-                            <div class="online">
-                                <img src="images/profile-pic.png">
+                <div class="write-comment" id="writeComment">
+                    <div class="write-comment-wrapper">
+                        <div class="comment-user-profile">
+                            <div class="online-comment">
+                                <div class="online">
+                                    <img src="images/profile-pic.png">
+                                </div>
                             </div>
                         </div>
+                        <div class="write-comment-box">
+                            <input type="text" placeholder="Comment...">
+                        </div>
                     </div>
-                    <div class="write-comment-box">
-                        <input type="text" placeholder="Comment...">
+                    <div class="post-profile-icon">
+                        <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
                     </div>
                     
                 </div>
@@ -364,7 +380,9 @@
                         <p onclick="showComments()">All Comments</p> <i class="fas fa-caret-down"></i>
                     </div>
                 </div>
-                    <div class="write-comment">
+
+                <div class="write-comment" id="writeComment">
+                    <div class="write-comment-wrapper">
                         <div class="comment-user-profile">
                             <div class="online-comment">
                                 <div class="online">
@@ -375,8 +393,12 @@
                         <div class="write-comment-box">
                             <input type="text" placeholder="Comment...">
                         </div>
-                        
                     </div>
+                    <div class="post-profile-icon">
+                        <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
+                    </div>
+                    
+                </div>
     
     
     
@@ -455,16 +477,21 @@
                     </div>
 
                 </div>
-                <div class="write-comment">
-                    <div class="comment-user-profile">
-                        <div class="online-comment">
-                            <div class="online">
-                                <img src="images/profile-pic.png">
+                <div class="write-comment" id="writeComment">
+                    <div class="write-comment-wrapper">
+                        <div class="comment-user-profile">
+                            <div class="online-comment">
+                                <div class="online">
+                                    <img src="images/profile-pic.png">
+                                </div>
                             </div>
                         </div>
+                        <div class="write-comment-box">
+                            <input type="text" placeholder="Comment...">
+                        </div>
                     </div>
-                    <div class="write-comment-box">
-                        <input type="text" placeholder="Comment...">
+                    <div class="post-profile-icon">
+                        <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
                     </div>
                     
                 </div>
@@ -543,16 +570,21 @@
                         <p onclick="showComments()">All Comments</p> <i class="fas fa-caret-down"></i>
                     </div>
                 </div>
-                <div class="write-comment">
-                    <div class="comment-user-profile">
-                        <div class="online-comment">
-                            <div class="online">
-                                <img src="images/profile-pic.png">
+                <div class="write-comment" id="writeComment">
+                    <div class="write-comment-wrapper">
+                        <div class="comment-user-profile">
+                            <div class="online-comment">
+                                <div class="online">
+                                    <img src="images/profile-pic.png">
+                                </div>
                             </div>
                         </div>
+                        <div class="write-comment-box">
+                            <input type="text" placeholder="Comment...">
+                        </div>
                     </div>
-                    <div class="write-comment-box">
-                        <input type="text" placeholder="Comment...">
+                    <div class="post-profile-icon">
+                        <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
                     </div>
                     
                 </div>
