@@ -1,12 +1,6 @@
 
 
 
-let settingsMenu = document.querySelector(".settings-menu");
-
-function settingsMenuToggle(){
-    settingsMenu.classList.toggle("settings-menu-height")
-}
-
 // toggle btn dark mode
 
 let darkBtn = document.getElementById("dark-btn");
@@ -14,6 +8,23 @@ let dmImg1 = document.getElementById("iconPlaceholderNews");
 let dmImg2 = document.getElementById("iconPlaceholderFriends");
 let dmImg3 = document.getElementById("iconPlaceholderGroup");
 let dmImg4 = document.getElementById("iconPlaceholderWatch");
+
+window.onload = (event) =>{
+
+  dmImg1.style.backgroundImage = "url(/images/news-darkmode.png)";
+  dmImg2.style.backgroundImage = "url(/images/friends-darkmode.png)";
+  dmImg3.style.backgroundImage = "url(/images/group-darkmode.png)";
+  dmImg4.style.backgroundImage = "url(/images/watch-darkmode.png)";
+
+  console.log('Page Loaded');
+
+};
+
+let settingsMenu = document.querySelector(".settings-menu");
+
+function settingsMenuToggle(){
+    settingsMenu.classList.toggle("settings-menu-height")
+}
 
 
 darkBtn.onclick = function(){

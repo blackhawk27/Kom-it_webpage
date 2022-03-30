@@ -6,12 +6,16 @@
 }
 
 .dark-theme {
-  --body-color: #efefef;
-  --nav-color: #c3b1e1;
-  --bg-color: #fff;
-  --a-color: #1876f2;
-  --p-color: #626262;
-  --a-shortcut-color: #626262;
+  --body-color: #ffee93;
+  --nav-color: #e27a41;
+  --bg-color: #e27a41;
+  --a-color: #a30000;
+  --p-color: #efefef;
+  --a-shortcut-color: #000;
+  --add-post-color: #fff;
+  --post-text-color: #fff;
+  --post-color: #000;
+  --small-text: #fff;
 }
 
 :root {
@@ -21,6 +25,10 @@
   --a-color: #03dac5;
   --p-color: #ff0266;
   --a-shortcut-color: #bb86fc; /*#ff0266*/
+  --add-post-color: #ff0266;
+  --post-text-color: #fff;
+  --post-color: #03dac5;
+  --small-text: #fff;
 }
 
 body {
@@ -39,9 +47,19 @@ nav {
   z-index: 100;
 }
 
+.add-post i{
+  font-size: 2em;
+  color: var(--add-post-color);
+  margin-left: 180px;
+}
+
+
 .logo {
-  width: 160px;
+  width: 250px;
+  height: fit-content;
   margin-right: 45px;
+  margin-top: -5px;
+  margin-bottom: -10px;
 }
 
 .nav-left,
@@ -188,7 +206,7 @@ nav {
   background: var(--bg-color);
   padding: 20px;
   border-radius: 4px;
-  color: #626262;
+  color: var(--a-shortcut-color);
 }
 
 .main-content {
@@ -226,8 +244,8 @@ nav {
 
 .shortcut-links p {
   margin: 25px 0;
-  color: #626262;
-  font-weight: 500;
+  color: var(--a-shortcut-color);
+  font-weight: 600;
 }
 
 .sidebar-title {
@@ -244,7 +262,7 @@ nav {
 
 .sidebar-title a {
   text-decoration: none;
-  color: #1876f2;
+  color: var(--small-text);
   font-size: 12px;
 }
 
@@ -288,7 +306,6 @@ nav {
 
 .sidebar-ads {
   width: 100%;
-  margin-bottom: 20px;
   border-radius: 4px;
 }
 
@@ -314,13 +331,6 @@ nav {
   bottom: 5px;
 }
 
-.write-post-container {
-  width: 100%;
-  background: var(--bg-color);
-  border-radius: 6px;
-  padding: 20px;
-  color: #626262;
-}
 
 .user-profile {
   display: flex;
@@ -338,6 +348,7 @@ nav {
   font-weight: 500;
   color: var(--p-color);
 }
+
 
 .user-profile small {
   font-size: 12px;
@@ -381,17 +392,17 @@ nav {
   background: var(--bg-color);
   border-radius: 6px;
   padding: 20px;
-  color: #626262;
-  margin: 20px 0;
+  color: var(--post-color);
+  margin-bottom: 20px;
 }
 
 .user-profile span {
   font-size: 13px;
-  color: #9a9a9a;
+  color: var(--post-color);
 }
 
 .post-text {
-  color: #9a9a9a;
+  color: var(--post-text-color);
   margin: 15px 0;
   font-size: 15px;
 }
@@ -426,9 +437,8 @@ nav {
 }
 
 .activity-icons div {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  margin-right: 30px;
 }
 
 .post-profile-icon {
@@ -443,13 +453,13 @@ nav {
 .post-profile-icon p {
   font-size: 12px;
   font-weight: 600;
-  color: #626262;
+  color: var(--post-color);
   margin-right: 5px;
   cursor: pointer;
 }
 
 .post-row a {
-  color: #9a9a9a;
+  color: var(--post-color);
 }
 
 .load-more-btn {
@@ -491,7 +501,7 @@ nav {
 
 .user-profile a {
   font-size: 12px;
-  color: var(--a-color);
+  color: var(--post-color);
   text-decoration: none;
 }
 
@@ -529,10 +539,20 @@ nav {
 
 /*--------------- darkmode button ---------------*/
 
+.change-theme{
+  position: absolute;
+  display: flex;
+  right: 70px;
+  top: 30px;
+}
+.change-theme p{
+  color: var(--a-color);
+}
+
 #dark-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 0px;
+  right: -50px;
   background: #0a0a0a;
   width: 45px;
   border-radius: 15px;
@@ -570,6 +590,12 @@ nav {
 .post-icon-wrapper p {
   display: flex;
   margin-left: 30px;
+}
+.post-icon-wrapper :nth-child(2){
+  margin-left: 40px;
+}
+.post-icon-wrapper :nth-child(3){
+  margin-left: 20px;
 }
 
 /*-------------------- COMMENT ----------------------*/

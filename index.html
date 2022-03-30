@@ -21,6 +21,7 @@
                 <li><img src="images/inbox.png"></li>
                 <li><img src="images/video.png"></li>
             </ul>
+            <span href="#" class="add-post"><i class="fa-solid fa-circle-plus"></i></span>
         </div>
         <div class="nav-right">
 
@@ -37,16 +38,18 @@
         <!------------- settings menu -------------->
         <div class="settings-menu">
 
-            <div id="dark-btn">
-                <span></span>
+            <div class="change-theme">
+                <p>Theme</p>
+                <div id="dark-btn">
+                    <span></span>
+                </div>
             </div>
-
 
             <div class="settings-menu-inner">
                 <div class="user-profile">
                     <img src="images/profile-pic.png">
                     <div>
-                        <p>User1</p>
+                        <p>User0</p>
                         <a href="#">See your profile</a>
                     </div>
                 </div>
@@ -127,42 +130,13 @@
         <div class="main-content">
 
 
-            <div class="write-post-container">
-                <div class="user-profile">
-                    <img src="images/profile-pic.png">
-                    <div>
-                        <p>User1</p>
-                        <small>Public <i class="fas fa-caret-down"></i></small>
-                    </div>
-                </div>
-
-                <div class="post-input-container">
-                    <textarea rows="3" placeholder="what's on your mind, John?"></textarea>
-
-                    <div class="add-post-links">
-                        <a href="#"><img src="images/live-video.png"> Live Video</a>
-                        <a href="#"><img src="images/photo.png"> Photo/Video</a>
-                        <a href="#"><img src="images/feeling.png"> Feeling/Activity</a>
-                    </div>
-
-
-
-                </div>
-
-
-            </div>
-
-            
-
-
-
 
             <div class="post-container">
                 <div class="post-row">
                     <div class="user-profile">
                         <img src="images/profile-pic.png">
                         <div>
-                            <p>User1</p>
+                            <p>User0</p>
                             <span>June 24 2022, 13:41 pm</span>
                         </div>
                     </div>
@@ -181,10 +155,11 @@
                             <div class="like-button" id="likeBtn">
                                 <p id="likeValue"></p>
                             </div>
-                        </div>
+                        
 
-                        <div class="show-comments" id="showCommentsIcon" onclick="showCommentInput()"><img src="images/comments.png"> 2</div>
-                        <div><img src="images/share.png"> 20</div>
+                            <div class="show-comments" id="showCommentsIcon" onclick="showCommentInput()"><img src="images/comments.png"> 2</div>
+                            <div><img src="images/share.png"> 20</div>
+                        </div>
                     </div>
                     <div class="post-profile-icon mobile-comments">
                         <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
@@ -264,7 +239,7 @@
                     <div class="user-profile">
                         <img src="images/profile-pic.png">
                         <div>
-                            <p>User1</p>
+                            <p>User0</p>
                             <span>July 26 2022, 3:41 am</span>
                         </div>
                     </div>
@@ -279,13 +254,20 @@
 
                 <div class="post-row">
                     <div class="activity-icons">
-                        <div><img src="images/like.png"> 1</div>
-                        <div class="show-comments" id="showCommentsIcon" onclick="showComments()"><img src="images/comments.png"> 2</div>
-                        <div><img src="images/share.png"> 5</div>
+                        <div class="post-icon-wrapper">
+                            <div class="like-button" id="likeBtn">
+                                <p id="likeValue"></p>
+                            </div>
+                        
+
+                            <div class="show-comments" id="showCommentsIcon" onclick="showCommentInput()"><img src="images/comments.png"> 12</div>
+                            <div><img src="images/share.png"> 8</div>
+                        </div>
                     </div>
-                    <div class="post-profile-icon">
-                        <p onclick="showComments()">All Comments</p> <i class="fas fa-caret-down"></i>
+                    <div class="post-profile-icon mobile-comments">
+                        <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
                     </div>
+                    
                 </div>
                 <div class="write-comment" id="writeComment">
                     <div class="write-comment-wrapper">
@@ -357,7 +339,7 @@
                     <div class="user-profile">
                         <img src="images/profile-pic.png">
                         <div>
-                            <p>User1</p>
+                            <p>User0</p>
                             <span>July 26 2022, 3:41 am</span>
                         </div>
                     </div>
@@ -372,13 +354,20 @@
 
                 <div class="post-row">
                     <div class="activity-icons">
-                        <div><img src="images/like.png"> 120</div>
-                        <div class="show-comments" id="showCommentsIcon" onclick="showComments()"><img src="images/comments.png"> 2</div>
-                        <div><img src="images/share.png"> 20</div>
+                        <div class="post-icon-wrapper">
+                            <div class="like-button" id="likeBtn">
+                                <p id="likeValue"></p>
+                            </div>
+                        
+
+                            <div class="show-comments" id="showCommentsIcon" onclick="showCommentInput()"><img src="images/comments.png"> 1</div>
+                            <div><img src="images/share.png"> 0</div>
+                        </div>
                     </div>
-                    <div class="post-profile-icon">
-                        <p onclick="showComments()">All Comments</p> <i class="fas fa-caret-down"></i>
+                    <div class="post-profile-icon mobile-comments">
+                        <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
                     </div>
+                    
                 </div>
 
                 <div class="write-comment" id="writeComment">
@@ -452,7 +441,7 @@
                     <div class="user-profile">
                         <img src="images/profile-pic.png">
                         <div>
-                            <p>User1</p>
+                            <p>User0</p>
                             <span>July 26 2022, 3:41 am</span>
                         </div>
                     </div>
@@ -467,15 +456,20 @@
 
                 <div class="post-row">
                     <div class="activity-icons">
-                        <div><img src="images/like.png"> 120</div>
-                        <div class="show-comments" id="showCommentsIcon" onclick="showComments()"><img src="images/comments.png"> 2</div>
-                        <div><img src="images/share.png"> 20</div>
-                    </div>
+                        <div class="post-icon-wrapper">
+                            <div class="like-button" id="likeBtn">
+                                <p id="likeValue"></p>
+                            </div>
+                        
 
-                    <div class="post-profile-icon">
-                        <p onclick="showComments()">All Comments</p> <i class="fas fa-caret-down"></i>
+                            <div class="show-comments" id="showCommentsIcon" onclick="showCommentInput()"><img src="images/comments.png"> 8</div>
+                            <div><img src="images/share.png"> 47</div>
+                        </div>
                     </div>
-
+                    <div class="post-profile-icon mobile-comments">
+                        <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
+                    </div>
+                    
                 </div>
                 <div class="write-comment" id="writeComment">
                     <div class="write-comment-wrapper">
@@ -547,7 +541,7 @@
                     <div class="user-profile">
                         <img src="images/profile-pic.png">
                         <div>
-                            <p>User1</p>
+                            <p>User0</p>
                             <span>July 26 2022, 3:41 am</span>
                         </div>
                     </div>
@@ -562,13 +556,20 @@
 
                 <div class="post-row">
                     <div class="activity-icons">
-                        <div><img src="images/like.png"> 120</div>
-                        <div class="show-comments" id="showCommentsIcon" onclick="showComments()"><img src="images/comments.png"> 2</div>
-                        <div><img src="images/share.png"> 20</div>
+                        <div class="post-icon-wrapper">
+                            <div class="like-button" id="likeBtn">
+                                <p id="likeValue"></p>
+                            </div>
+                        
+
+                            <div class="show-comments" id="showCommentsIcon" onclick="showCommentInput()"><img src="images/comments.png"> 4</div>
+                            <div><img src="images/share.png"> 3</div>
+                        </div>
                     </div>
-                    <div class="post-profile-icon">
-                        <p onclick="showComments()">All Comments</p> <i class="fas fa-caret-down"></i>
+                    <div class="post-profile-icon mobile-comments">
+                        <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
                     </div>
+                    
                 </div>
                 <div class="write-comment" id="writeComment">
                     <div class="write-comment-wrapper">
@@ -647,12 +648,6 @@
         <div class="right-sidebar">
 
             <div class="sidebar-title">
-                <h4>Advertisement</h4>
-                <a href="#">Close</a>
-            </div>
-            <img src="images/advertisement.png" class="sidebar-ads">
-
-            <div class="sidebar-title">
                 <h4>Friends</h4>
                 <a href="#">Hide Friends</a>
             </div>
@@ -661,28 +656,32 @@
                 <div class="online">
                     <img src="images/member-1.png">
                 </div>
-                <p>User2</p>
+                <p>User1</p>
             </div>
             <div class="online-list">
                 <div class="online">
                     <img src="images/member-2.png">
                 </div>
-                <p>User3</p>
+                <p>User2</p>
             </div>
             <div class="online-list">
                 <div class="online">
                     <img src="images/member-3.png">
                 </div>
-                <p>User4</p>
+                <p>User3</p>
             </div>
-
+            <div class="sidebar-title">
+                <h4>Advertisement</h4>
+                <a href="#">Close</a>
+            </div>
+            <img src="images/advertisement.png" class="sidebar-ads">
 
 
         </div>
     </div>
 
 <div class="footer">
-    <p>Copyright 2022 - Wepdeveloper Oliver Lystlund</p>
+    <p>Copyright 2022 - Webdeveloper Oliver Lystlund</p>
 </div>
 
 <script src="app.js"></script>
