@@ -11,10 +11,10 @@ let dmImg4 = document.getElementById("iconPlaceholderWatch");
 
 window.onload = (event) =>{
 
-  dmImg1.style.backgroundImage = "url(/images/news-darkmode.png)";
-  dmImg2.style.backgroundImage = "url(/images/friends-darkmode.png)";
-  dmImg3.style.backgroundImage = "url(/images/group-darkmode.png)";
-  dmImg4.style.backgroundImage = "url(/images/watch-darkmode.png)";
+  dmImg1.style.backgroundImage = "url(images/news.png)";
+  dmImg2.style.backgroundImage = "url(images/friends.png)";
+  dmImg3.style.backgroundImage = "url(images/group.png)";
+  dmImg4.style.backgroundImage = "url(images/watch.png)";
 
   console.log('Page Loaded');
 
@@ -34,18 +34,18 @@ darkBtn.onclick = function(){
     // update mode
     if(localStorage.getItem("theme") == "dark"){
         localStorage.setItem("theme", "light");
-        dmImg1.style.backgroundImage = "url(/images/news-darkmode.png)";
-        dmImg2.style.backgroundImage = "url(/images/friends-darkmode.png)";
-        dmImg3.style.backgroundImage = "url(/images/group-darkmode.png)";
-        dmImg4.style.backgroundImage = "url(/images/watch-darkmode.png)";
+        dmImg1.style.backgroundImage = "url(images/news.png)";
+        dmImg2.style.backgroundImage = "url(images/friends.png)";
+        dmImg3.style.backgroundImage = "url(images/group.png)";
+        dmImg4.style.backgroundImage = "url(images/watch.png)";
         
     }
     else{
         localStorage.setItem("theme", "dark");
-        dmImg1.style.backgroundImage = "url(/images/news.png)";
-        dmImg2.style.backgroundImage = "url(/images/friends.png)";
-        dmImg3.style.backgroundImage = "url(/images/group.png)";
-        dmImg4.style.backgroundImage = "url(/images/watch.png)";
+        dmImg1.style.backgroundImage = "url(images/news.png)";
+        dmImg2.style.backgroundImage = "url(images/friends.png)";
+        dmImg3.style.backgroundImage = "url(images/group.png)";
+        dmImg4.style.backgroundImage = "url(images/watch.png)";
     }
 
 
@@ -55,14 +55,15 @@ let likeValue = document.getElementById("likeValue");
 let likeCount = 4;
 let setValue = likeValue.innerHTML = likeCount;
 
-let likeBtn = document.getElementById("likeBtn");
-let images = ["/images/like.png", "/images/like-blue.png"];
+
+let images = ["images/like.png", "images/like-blue.png"];
 let index = 2;
 
 
-likeBtn.onclick = function(){
-  console.log("function called");
-  
+function like(parentElement){
+  console.log(parentElement);
+  let likeBtn = document.getElementById(parentElement);
+  console.log(likeBtn);
   if(index == images.length){
     index = 0;
     likeBtn.style.backgroundImage = "url("+images[1]+")";
@@ -76,7 +77,6 @@ likeBtn.onclick = function(){
     setValue = likeValue.innerHTML = likeCount;
   }
   
-
 }
 
 
