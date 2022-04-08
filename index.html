@@ -21,10 +21,10 @@
                 <li><img src="images/inbox.png"></li>
                 <li><img src="images/video.png"></li>
             </ul>
-            <span href="#" class="add-post"><i class="fa-solid fa-circle-plus"></i></span>
+            
         </div>
         <div class="nav-right">
-
+            <span href="#" class="add-post"><i class="fa-solid fa-circle-plus"></i></span>
             <div class="search-box">
                 <img src="images/search.png">
                 <input type="text" placeholder="Search">
@@ -49,7 +49,7 @@
                 <div class="user-profile">
                     <img src="images/profile-pic.png">
                     <div>
-                        <p>User0</p>
+                        <p>Emil Stabil</p>
                         <a href="#">See your profile</a>
                     </div>
                 </div>
@@ -136,8 +136,8 @@
                     <div class="user-profile">
                         <img src="images/profile-pic.png">
                         <div>
-                            <p>User0</p>
-                            <span>June 24 2022, 13:41 pm</span>
+                            <p>Paul Paludan Poulsen</p>
+                            <span>March 24 2022, 11:41 pm</span>
                         </div>
                     </div>
                     <a href="#"><i class="fas fa-ellipsis-v"></i></a>
@@ -152,7 +152,7 @@
                 <div class="post-row">
                     <div class="activity-icons">
                         <div class="post-icon-wrapper">
-                            <div class="like-button" id="likeBtn">
+                            <div class="like-button" id="likeBtn1" onclick="like(this.id, this)">
                                 <p id="likeValue"></p>
                             </div>
                         
@@ -237,10 +237,10 @@
             <div class="post-container">
                 <div class="post-row">
                     <div class="user-profile">
-                        <img src="images/profile-pic.png">
+                        <img src="images/member-2.png">
                         <div>
-                            <p>User0</p>
-                            <span>July 26 2022, 3:41 am</span>
+                            <p>Emil Stabil</p>
+                            <span>Febuary 18 2022, 1:31 am</span>
                         </div>
                     </div>
                     <a href="#"><i class="fas fa-ellipsis-v"></i></a>
@@ -255,8 +255,8 @@
                 <div class="post-row">
                     <div class="activity-icons">
                         <div class="post-icon-wrapper">
-                            <div class="like-button" id="likeBtn">
-                                <p id="likeValue"></p>
+                            <div class="like-button" id="likeBtn2" onclick="like(this.id)">
+                                <p>8</p>
                             </div>
                         
 
@@ -337,10 +337,10 @@
             <div class="post-container">
                 <div class="post-row">
                     <div class="user-profile">
-                        <img src="images/profile-pic.png">
+                        <img src="images/member-3.png">
                         <div>
-                            <p>User0</p>
-                            <span>July 26 2022, 3:41 am</span>
+                            <p>Luna Nielsen</p>
+                            <span>April 04 2022, 9:26 am</span>
                         </div>
                     </div>
                     <a href="#"><i class="fas fa-ellipsis-v"></i></a>
@@ -355,13 +355,13 @@
                 <div class="post-row">
                     <div class="activity-icons">
                         <div class="post-icon-wrapper">
-                            <div class="like-button" id="likeBtn">
-                                <p id="likeValue"></p>
+                            <div class="like-button" id="likeBtn3" onclick="like(this.id)">
+                                <p>69</p>
                             </div>
                         
 
-                            <div class="show-comments" id="showCommentsIcon" onclick="showCommentInput()"><img src="images/comments.png"> 1</div>
-                            <div><img src="images/share.png"> 0</div>
+                            <div class="show-comments" id="showCommentsIcon" onclick="showCommentInput()"><img src="images/comments.png"> 420</div>
+                            <div><img src="images/share.png"> 999+</div>
                         </div>
                     </div>
                     <div class="post-profile-icon mobile-comments">
@@ -439,10 +439,10 @@
             <div class="post-container">
                 <div class="post-row">
                     <div class="user-profile">
-                        <img src="images/profile-pic.png">
+                        <img src="images/member-1.png">
                         <div>
-                            <p>User0</p>
-                            <span>July 26 2022, 3:41 am</span>
+                            <p>Katrine Høne</p>
+                            <span>March 20 2022, 1:00 pm</span>
                         </div>
                     </div>
                     <a href="#"><i class="fas fa-ellipsis-v"></i></a>
@@ -457,8 +457,8 @@
                 <div class="post-row">
                     <div class="activity-icons">
                         <div class="post-icon-wrapper">
-                            <div class="like-button" id="likeBtn">
-                                <p id="likeValue"></p>
+                            <div class="like-button" id="likeBtn4" onclick="like(this.id)">
+                                <p>1</p>
                             </div>
                         
 
@@ -539,10 +539,10 @@
             <div class="post-container">
                 <div class="post-row">
                     <div class="user-profile">
-                        <img src="images/profile-pic.png">
+                        <img src="images/member-2.png">
                         <div>
-                            <p>User0</p>
-                            <span>July 26 2022, 3:41 am</span>
+                            <p>Emil Stabil</p>
+                            <span>January 3 2022, 5:09 pm</span>
                         </div>
                     </div>
                     <a href="#"><i class="fas fa-ellipsis-v"></i></a>
@@ -557,8 +557,8 @@
                 <div class="post-row">
                     <div class="activity-icons">
                         <div class="post-icon-wrapper">
-                            <div class="like-button" id="likeBtn">
-                                <p id="likeValue"></p>
+                            <div class="like-button" id="likeBtn5" onclick="like(this.id)">
+                                <p>3</p>
                             </div>
                         
 
@@ -656,19 +656,19 @@
                 <div class="online">
                     <img src="images/member-1.png">
                 </div>
-                <p>User1</p>
+                <p>Katrine Høne</p>
             </div>
             <div class="online-list">
                 <div class="online">
                     <img src="images/member-2.png">
                 </div>
-                <p>User2</p>
+                <p>Emil Stabil</p>
             </div>
             <div class="online-list">
                 <div class="online">
                     <img src="images/member-3.png">
                 </div>
-                <p>User3</p>
+                <p>Luna Nielsen</p>
             </div>
             <div class="sidebar-title">
                 <h4>Advertisement</h4>

@@ -6,29 +6,35 @@
 }
 
 .dark-theme {
-  --body-color: #ffee93;
-  --nav-color: #e27a41;
-  --bg-color: #e27a41;
-  --a-color: #a30000;
-  --p-color: #efefef;
-  --a-shortcut-color: #000;
+  --body-color: #f3f3f3;
+  --nav-color: #ff5a00;
+  --bg-color: #fff;
+  --a-color: #606060;
+  --p-color: #404040;
+  --a-shortcut-color: #606060;
+  --left-sidebar-h: #1876f2;
   --add-post-color: #fff;
-  --post-text-color: #fff;
-  --post-color: #000;
-  --small-text: #fff;
+  --post-text-color: #606060;
+  --post-color: #ff5a00;
+  --small-text: #9a9a9a;
+  --post-icon-num: #808080;
+  --comment-content-text: #404040;
 }
 
 :root {
   --body-color: #121212;
   --nav-color: #1f1b24;
   --bg-color: #1f1b24;
-  --a-color: #03dac5;
-  --p-color: #ff0266;
-  --a-shortcut-color: #bb86fc; /*#ff0266*/
-  --add-post-color: #ff0266;
-  --post-text-color: #fff;
-  --post-color: #03dac5;
+  --a-color: #ff5a00;
+  --p-color: #f7ff4e;
+  --a-shortcut-color: #f7ff4e; /*#ff0266*/
+  --left-sidebar-h: #ff0266;
+  --add-post-color: #f7ff4e;
+  --post-text-color: #eee;
+  --post-color: #ff5a00;
   --small-text: #fff;
+  --post-icon-num: #f7ff4e;
+  --comment-content-text: #404040;
 }
 
 body {
@@ -50,8 +56,14 @@ nav {
 .add-post i{
   font-size: 2em;
   color: var(--add-post-color);
-  margin-left: 180px;
+  display: flex;
+  position: relative;
 }
+.add-post{
+  margin-right: 5%;
+}
+
+
 
 
 .logo {
@@ -147,7 +159,7 @@ nav {
 }
 
 .icon-placeholder-news {
-  background-image: url(/images/news.png);
+  background-image: url(images/news.png);
   box-sizing: border-box;
   background-size: contain;
   background-repeat: no-repeat;
@@ -158,7 +170,7 @@ nav {
 }
 
 .icon-placeholder-friends {
-  background-image: url(/images/friends.png);
+  background-image: url(images/friends.png);
   box-sizing: border-box;
   background-size: contain;
   background-repeat: no-repeat;
@@ -169,7 +181,7 @@ nav {
 }
 
 .icon-placeholder-group {
-  background-image: url(/images/group.png);
+  background-image: url(images/group.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 25px;
@@ -179,7 +191,7 @@ nav {
 }
 
 .icon-placeholder-watch {
-  background-image: url(/images/watch.png);
+  background-image: url(images/watch.png);
   box-sizing: border-box;
   background-size: contain;
   background-repeat: no-repeat;
@@ -219,7 +231,7 @@ nav {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-  color: var(--a-shortcut-color);
+  color: var(--left-sidebar-h);
   width: fit-content;
 }
 
@@ -413,7 +425,7 @@ nav {
 }
 
 .post-text a {
-  color: #1876f2;
+  color: var(--left-sidebar-h);
   text-decoration: none;
 }
 
@@ -577,11 +589,12 @@ nav {
 /*-------------------- Like button ------------------*/
 
 .like-button {
-  background-image: url(/images/like.png);
+  background-image: url(images/like.png);
   box-sizing: border-box;
   background-size: contain;
   background-repeat: no-repeat;
   width: 18px;
+  height: 18px;
   align-items: center;
 }
 #likeBtn {
@@ -590,12 +603,15 @@ nav {
 .post-icon-wrapper p {
   display: flex;
   margin-left: 30px;
+  color: var(--post-icon-num);
 }
 .post-icon-wrapper :nth-child(2){
   margin-left: 40px;
+  color: var(--post-icon-num);
 }
 .post-icon-wrapper :nth-child(3){
   margin-left: 20px;
+  color: var(--post-icon-num);
 }
 
 /*-------------------- COMMENT ----------------------*/
@@ -713,6 +729,7 @@ nav {
 
 .comment-content p {
   font-size: 14px;
+  color: var(--comment-content-text);
 }
 
 .comment-wrapper {
