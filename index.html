@@ -6,25 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crazy Memes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/a1d252701e.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
-    
+
+    <div id="modal">
+        
+        <div class="modalcontent">
+          <h1>Terms Of Service</h1>
+          <i id="close" class="close-modal fas fa-times" onclick="closeModal()"></i>
+          <p>
+            If you upload content and you don’t own the copyright and don’t have permission to upload, 
+            reproduce, distribute, publicly perform, 
+            or create a derivative work of that content or any portion of that content, 
+            you may be sued by the copyright owner thereof for copyright infringement.<br><br>
+            The damages for copyright infringement can be severe. In the United States, 
+            statutory damages (available to a copyright owner without proving actual harm) 
+            can range from $750 - $30,000 per work infringed, and run as high as $150,000 for 
+            willful infringement. Damages vary in other jurisdictions.<br><br>
+            If we are notified that material you have uploaded to the United Memes Platform 
+            infringes someone’s copyright, we will notify you and take down the content you posted. 
+            This is required by law. If you persist in uploading unauthorized content, we will, 
+            pursuant to our Repeat Infringer Policy, ban you from using the United Memes Platform.<br><br>
+
+        </p>
+        </div>
+      </div>
+
     <nav>
 
         <div class="nav-left">
+
             <a href="index.html">
-            <img src="images/logo.png" class="logo">
+                <div class="logo-img" id="logoImg"></div>
             </a>
-            <ul>
+
+            <!-- <ul>
                 <li><img src="images/notification.png"></li>
                 <li><img src="images/inbox.png"></li>
                 <li><img src="images/video.png"></li>
-            </ul>
+            </ul> -->
             
         </div>
         <div class="nav-right">
-            <span href="#" class="add-post"><i class="fa-solid fa-circle-plus"></i></span>
+            <span href="#" class="add-post" onclick="addPost()"><i class="fa-solid fa-circle-plus"></i></span>
             <div class="search-box">
                 <img src="images/search.png">
                 <input type="text" placeholder="Search">
@@ -39,10 +66,18 @@
         <div class="settings-menu">
 
             <div class="change-theme">
-                <p>Theme</p>
-                <div id="dark-btn">
-                    <span></span>
+                <div class="change-theme-content">
+                    <p id="modeText">Day</p>
                 </div>
+
+                <div class="change-theme-i"><i class="fa-solid fa-circle-half-stroke"></i></div>
+
+                <div class="toggleDarkIcon" onclick="iconDarkToggle()">
+                    <div id="dark-btn">
+                        <span></span>
+                    </div>
+                </div>
+                
             </div>
 
             <div class="settings-menu-inner">
@@ -129,6 +164,29 @@
     <!------------- main-content ---------------->
         <div class="main-content">
 
+            <div class="write-post-container" id="addPostBtn">
+                <div class="user-profile">
+                    <img src="images/profile-pic.png">
+                    <div>
+                        <p>User</p>
+                        <small>Public <i class="fas fa-caret-down"></i></small>
+                    </div>
+                </div>
+
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="Got a funny meme?"></textarea>
+
+                    <div class="add-post-links">
+                        <a href="#"><img src="images/live-video.png"> Gif</a>
+                        <a href="#"><img src="images/photo.png"> Photo/Video</a>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
 
 
             <div class="post-container">
@@ -143,9 +201,8 @@
                     <a href="#"><i class="fas fa-ellipsis-v"></i></a>
                 </div>
                
-                <p class="post-text">Lorem ipsum dolor, <span>@meme</span> sit amet consectetur adipisicing elit. Pariatur, 
-                    quod molestiae recusandae.
-                    <a href="#">#Developer</a> <a href="#">#imTheBest</a>
+                <p class="post-text">Putin at the start of the war be like... But Ukraine had other plans! <br>
+                    <a href="#">#SlavaUkraini</a> <a href="#">#Putin</a>
                 </p>
                 <img src="images/feed-image-1.png" class="post-img">
 
@@ -200,7 +257,7 @@
 
                         <div class="comment-wrapper">
                             <div class="comment-content">
-                                <p>I think it's funny<br>SIKE!!<br>test<br>test<br>test<br>test</p>
+                                <p>I think it's funny</p>
                             </div>
                             <div class="reply-btn">
                                 <p>Reply</p>
@@ -246,9 +303,10 @@
                     <a href="#"><i class="fas fa-ellipsis-v"></i></a>
                 </div>
                
-                <p class="post-text">Lorem ipsum dolor, <span>@WhatEver</span> sit amet consectetur adipisicing elit. Pariatur, 
-                    quod molestiae recusandae.
-                    <a href="#">#Developer</a> <a href="#">#FuckThis</a>
+                <p class="post-text">
+                    When you have to much power...<br>Still can't believe this is happening. 
+                    Ukraine stay strong!! <br>
+                    <a href="#">#SlavaUkraini</a> <a href="#">#Putin</a>
                 </p>
                 <img src="images/feed-image-2.png" class="post-img">
 
@@ -256,7 +314,7 @@
                     <div class="activity-icons">
                         <div class="post-icon-wrapper">
                             <div class="like-button" id="likeBtn2" onclick="like(this.id)">
-                                <p>8</p>
+                                <p>843</p>
                             </div>
                         
 
@@ -346,9 +404,9 @@
                     <a href="#"><i class="fas fa-ellipsis-v"></i></a>
                 </div>
                
-                <p class="post-text">Lorem ipsum dolor, <span>@WhatEver</span> sit amet consectetur adipisicing elit. Pariatur, 
-                    quod molestiae recusandae.
-                    <a href="#">#Developer</a> <a href="#">#FuckThis</a>
+                <p class="post-text">
+                    My friend Mathias just sent me this, and i'm dying laughing!<br>
+                    <a href="#">#JackieChan</a>
                 </p>
                 <img src="images/feed-image-3.png" class="post-img">
 
@@ -356,7 +414,7 @@
                     <div class="activity-icons">
                         <div class="post-icon-wrapper">
                             <div class="like-button" id="likeBtn3" onclick="like(this.id)">
-                                <p>69</p>
+                                <p>669</p>
                             </div>
                         
 
@@ -448,9 +506,9 @@
                     <a href="#"><i class="fas fa-ellipsis-v"></i></a>
                 </div>
                
-                <p class="post-text">Lorem ipsum dolor, <span>@WhatEver</span> sit amet consectetur adipisicing elit. Pariatur, 
-                    quod molestiae recusandae.
-                    <a href="#">#Developer</a> <a href="#">#FuckThis</a>
+                <p class="post-text">
+                    I made this just for you Luna! Hope you sleep well at night😘<br>
+                    <a href="#">#JackieChan</a> <a href="#">#Cursed</a>
                 </p>
                 <img src="images/feed-image-4.png" class="post-img">
 
@@ -458,7 +516,7 @@
                     <div class="activity-icons">
                         <div class="post-icon-wrapper">
                             <div class="like-button" id="likeBtn4" onclick="like(this.id)">
-                                <p>1</p>
+                                <p>311</p>
                             </div>
                         
 
@@ -548,9 +606,9 @@
                     <a href="#"><i class="fas fa-ellipsis-v"></i></a>
                 </div>
                
-                <p class="post-text">Lorem ipsum dolor, <span>@WhatEver</span> sit amet consectetur adipisicing elit. Pariatur, 
-                    quod molestiae recusandae.
-                    <a href="#">#Developer</a> <a href="#">#FuckThis</a>
+                <p class="post-text">
+                    Are you guys doing well? I still havent left the house!!😆😆<br>
+                    <a href="#">#Corona</a> <a href="#">#Quarantine</a>
                 </p>
                 <img src="images/feed-image-5.png" class="post-img">
 
@@ -558,7 +616,7 @@
                     <div class="activity-icons">
                         <div class="post-icon-wrapper">
                             <div class="like-button" id="likeBtn5" onclick="like(this.id)">
-                                <p>3</p>
+                                <p>631</p>
                             </div>
                         
 
@@ -635,6 +693,67 @@
                 </div>
 
             </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/Capture.PNG">
+                        <div>
+                            <p>Sponsored</p>
+                            <span>January 21 2022, 1:09 pm</span>
+                        </div>
+                    </div>
+                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </div>
+               
+                <p class="post-text">
+                    Check out United Memes, we bet you will like it!!<br>
+                    <a href="#">#Ad</a>
+                </p>
+                <img src="images/advertisement.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div class="post-icon-wrapper">
+                            <div class="like-button" id="likeBtn5" onclick="like(this.id)">
+                                <p>871</p>
+                            </div>
+                        
+
+                            <div class="show-comments" id="showCommentsIcon" onclick="showCommentInput()"><img src="images/comments.png"> 62</div>
+                            <div><img src="images/share.png"> 358</div>
+                        </div>
+                    </div>
+                    <div class="post-profile-icon mobile-comments">
+                        <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
+                    </div>
+                    
+                </div>
+                <div class="write-comment" id="writeComment">
+                    <div class="write-comment-wrapper">
+                        <div class="comment-user-profile">
+                            <div class="online-comment">
+                                <div class="online">
+                                    <img src="images/profile-pic.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="write-comment-box">
+                            <input type="text" placeholder="Comment...">
+                        </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <p onclick="showComments()" id="showCommentsPtag">All Comments</p> <i class="fas fa-caret-down"></i>
+                    </div>
+                    
+                </div>
+
+
+
+                
+
+            </div>
+
 
             <button type="button" class="load-more-btn">Load More</button>
 

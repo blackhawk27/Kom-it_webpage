@@ -8,14 +8,42 @@ let dmImg1 = document.getElementById("iconPlaceholderNews");
 let dmImg2 = document.getElementById("iconPlaceholderFriends");
 let dmImg3 = document.getElementById("iconPlaceholderGroup");
 let dmImg4 = document.getElementById("iconPlaceholderWatch");
+//let logoImg = document.getElementById("logoImg");
+
+
+if (sessionStorage.getItem("modal") === "none") {
+  document.getElementById("modal").style.display = "none";
+}
+
+function closeModal(){
+  document.getElementById("modal").style.display = "none";
+  sessionStorage.setItem("modal", "none");
+  console.log("modal closing");
+};
+
+let mode = ["Day", "Night"];
+let modeText = document.getElementById("modeText");
+
+function changeModeText(){
+  
+  if(localStorage.getItem("theme") == "dark"){
+      modeText.innerHTML = mode[0];
+  }
+
+  else{
+    modeText.innerHTML = mode[1];
+  }
+}
+// ****************************************************************************************
 
 window.onload = (event) =>{
-
   dmImg1.style.backgroundImage = "url(images/news.png)";
   dmImg2.style.backgroundImage = "url(images/friends.png)";
   dmImg3.style.backgroundImage = "url(images/group.png)";
   dmImg4.style.backgroundImage = "url(images/watch.png)";
-
+  //logoImg.style.backgroundImage = "url(images/logo.png)";
+  changeModeText();
+  
   console.log('Page Loaded');
 
 };
@@ -23,8 +51,16 @@ window.onload = (event) =>{
 let settingsMenu = document.querySelector(".settings-menu");
 
 function settingsMenuToggle(){
-    settingsMenu.classList.toggle("settings-menu-height")
+    settingsMenu.classList.toggle("settings-menu-height");
 }
+
+let iconToggle = document.querySelector(".change-theme-i");
+
+function iconDarkToggle(){
+  iconToggle.classList.toggle("rotate-dark-icon");
+}
+
+
 
 
 darkBtn.onclick = function(){
@@ -38,6 +74,9 @@ darkBtn.onclick = function(){
         dmImg2.style.backgroundImage = "url(images/friends.png)";
         dmImg3.style.backgroundImage = "url(images/group.png)";
         dmImg4.style.backgroundImage = "url(images/watch.png)";
+        //logoImg.style.backgroundImage = "url(images/logo.png)";
+        changeModeText();
+        console.log("Dark Mode");
         
     }
     else{
@@ -46,13 +85,17 @@ darkBtn.onclick = function(){
         dmImg2.style.backgroundImage = "url(images/friends.png)";
         dmImg3.style.backgroundImage = "url(images/group.png)";
         dmImg4.style.backgroundImage = "url(images/watch.png)";
+        //logoImg.style.backgroundImage = "url(images/logo.png)";
+        changeModeText();
+        console.log("Light Mode");
     }
 
 
 }
 
+
 let likeValue = document.getElementById("likeValue");
-let likeCount = 4;
+let likeCount = 583;
 let setValue = likeValue.innerHTML = likeCount;
 
 
@@ -132,5 +175,16 @@ function showCommentInput(){
     input.style.display = "none";
     comments.style.display = "none";
 
+  }
+}
+
+let addPostBtn = document.getElementById("addPostBtn");
+
+function addPost(){
+  if (addPostBtn.style.display === "none") {
+    addPostBtn.style.display = "block";
+  } 
+  else {
+    addPostBtn.style.display = "none";
   }
 }

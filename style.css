@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,21 +11,24 @@
   --body-color: #f3f3f3;
   --nav-color: #ff5a00;
   --bg-color: #fff;
-  --a-color: #606060;
+  --a-color: #525252;
   --p-color: #404040;
-  --a-shortcut-color: #606060;
+  --a-shortcut-color: #525252;
   --left-sidebar-h: #1876f2;
   --add-post-color: #fff;
-  --post-text-color: #606060;
+  --post-text-color: #525252;
   --post-color: #ff5a00;
   --small-text: #9a9a9a;
   --post-icon-num: #808080;
   --comment-content-text: #404040;
+  --dark-i: #525252;
+  --search-input-color: #121212;
+  --search-background-color: #fff;
 }
 
 :root {
   --body-color: #121212;
-  --nav-color: #1f1b24;
+  --nav-color: #ff5a00;
   --bg-color: #1f1b24;
   --a-color: #ff5a00;
   --p-color: #f7ff4e;
@@ -32,10 +37,58 @@
   --add-post-color: #f7ff4e;
   --post-text-color: #eee;
   --post-color: #ff5a00;
-  --small-text: #fff;
+  --small-text: #ff5a00;
   --post-icon-num: #f7ff4e;
   --comment-content-text: #404040;
+  --dark-i: #ff5a00;
+  --search-input-color: #f7ff4e;
+  --search-background-color: #121212;
 }
+
+/*Pop Up terms of service*/
+
+#modal {
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.377);
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.modalcontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: min(90%, 500px);
+  padding: 20px;
+}
+.modalcontent p{
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: 0.5s;
+  font-size: 30px;
+}
+.close-modal:hover {
+  color: #a9a9a9;
+}
+
+
+
+
 
 body {
   background: var(--body-color);
@@ -51,6 +104,17 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  height: 70px;
+}
+
+.logo-img{
+  background-image: url(images/logo.png);
+  width: 300px;
+  height: 80px;
+  margin-bottom: -6%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.5s;
 }
 
 .add-post i{
@@ -58,6 +122,7 @@ nav {
   color: var(--add-post-color);
   display: flex;
   position: relative;
+  transition: 0.5s;
 }
 .add-post{
   margin-right: 5%;
@@ -93,6 +158,7 @@ nav {
 .nav-user-icon img {
   width: 40px;
   border-radius: 50%;
+  margin-top: 5px;
   cursor: pointer;
 }
 
@@ -101,12 +167,17 @@ nav {
 }
 
 .search-box {
-  background: #efefef;
+  background: var(--search-background-color);
   width: 350px;
   border-radius: 20px;
   display: flex;
   align-items: center;
   padding: 0 15px;
+  transition: 0.3s;
+}
+
+.search-box ::placeholder{
+  color: var(--search-input-color);
 }
 
 .search-box img {
@@ -118,6 +189,9 @@ nav {
   background: transparent;
   padding: 10px;
   outline: none;
+  color: var(--search-input-color);
+  /* font-weight: 600; */
+  /* letter-spacing: 0.5px; */
   border: 0;
 }
 
@@ -208,6 +282,7 @@ nav {
   width: 150px;
   margin-left: 40px;
   text-align: start;
+  font-weight: 550;
 }
 
 .right-sidebar {
@@ -225,6 +300,17 @@ nav {
   flex-basis: 47%;
 }
 
+.write-post-container {
+  width: 100%;
+  background: var(--bg-color);
+  border-radius: 6px;
+  padding: 20px;
+  color: var(--small-text);
+  margin-top: 0px;
+  margin-bottom: 20px;
+  display: none;
+}
+
 .imp-links a,
 .shortcut-links a {
   text-decoration: none;
@@ -233,6 +319,7 @@ nav {
   margin-bottom: 30px;
   color: var(--left-sidebar-h);
   width: fit-content;
+  font-weight: 550;
 }
 
 .imp-links a img {
@@ -250,6 +337,7 @@ nav {
 
 .shortcut-links a img {
   width: 40px;
+  height: 40px;
   border-radius: 4px;
   margin-right: 15px;
 }
@@ -258,6 +346,7 @@ nav {
   margin: 25px 0;
   color: var(--a-shortcut-color);
   font-weight: 600;
+  font-size: 20px;
 }
 
 .sidebar-title {
@@ -370,11 +459,15 @@ nav {
   padding-left: 55px;
   padding-top: 20px;
 }
+.post-input-container ::placeholder {
+  color: var(--search-input-color);
+}
 
 .post-input-container textarea {
   width: 100%;
   border: 0;
   outline: 0;
+  color: var(--search-input-color);
   border-bottom: 1px solid #ccc;
   background: transparent;
   resize: none;
@@ -389,7 +482,7 @@ nav {
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: #626262;
+  color: var(--small-text);
   margin-right: 30px;
   font-size: 13px;
 }
@@ -546,7 +639,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
-  color: #626262;
+  color: var(--p-color);
 }
 
 /*--------------- darkmode button ---------------*/
@@ -559,13 +652,30 @@ nav {
 }
 .change-theme p{
   color: var(--a-color);
+  margin: auto;
 }
+.change-theme-content{
+  width: 50px;
+  display: flex;
+}
+.change-theme-i{
+  color: var(--dark-i);
+  transform: rotate(180deg);
+  transition: 0.5s;
+  margin-right: 10px;
+}
+
+.rotate-dark-icon{
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+
 
 #dark-btn {
   position: absolute;
-  top: 0px;
+  top: -1px;
   right: -50px;
-  background: #0a0a0a;
+  background: #606060;
   width: 45px;
   border-radius: 15px;
   padding: 2px 3px;
@@ -586,6 +696,7 @@ nav {
   padding-left: 23px;
   background: #ccc;
 }
+
 /*-------------------- Like button ------------------*/
 
 .like-button {
@@ -607,6 +718,7 @@ nav {
 }
 .post-icon-wrapper :nth-child(2){
   margin-left: 40px;
+  padding-left: 10px;
   color: var(--post-icon-num);
 }
 .post-icon-wrapper :nth-child(3){
@@ -761,20 +873,27 @@ nav {
   }
   nav {
     flex-wrap: wrap;
+    height: 60px;
   }
   .search-box {
     display: none;
   }
-  .logo {
-    width: 110px;
+  .logo-img {
+    width: 175px;
     margin-right: 20px;
+    height: 45px;
+    margin-top: 0px;
+  }
+  .change-theme p{
+    display: none;
   }
   .nav-left ul li img {
     width: 20px;
     margin: 0 8px;
   }
   .nav-user-icon img {
-    width: 30px;
+    width: 35px;
+    margin-top: 3px;
   }
   .nav-user-icon {
     margin-left: 0;
@@ -803,5 +922,19 @@ nav {
   /* Comment section */
   .mobile-comments {
     display: none;
+  }
+  .nav-right{
+    width: auto;
+    height: auto;
+  }
+  /* Navbar icons */
+  .nav-left ul li {
+    display: none;
+  }
+  .add-post{
+    margin-right: 0%;
+  }
+  .add-post i{
+    right: 30px;
   }
 }
