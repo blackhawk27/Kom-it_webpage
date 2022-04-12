@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crazy Memes</title>
+    <title>UnitedMemes.com</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/a1d252701e.js" crossorigin="anonymous"></script>
@@ -12,28 +12,7 @@
 </head>
 <body>
 
-    <div id="modal">
-        
-        <div class="modalcontent">
-          <h1>Terms Of Service</h1>
-          <i id="close" class="close-modal fas fa-times" onclick="closeModal()"></i>
-          <p>
-            If you upload content and you don’t own the copyright and don’t have permission to upload, 
-            reproduce, distribute, publicly perform, 
-            or create a derivative work of that content or any portion of that content, 
-            you may be sued by the copyright owner thereof for copyright infringement.<br><br>
-            The damages for copyright infringement can be severe. In the United States, 
-            statutory damages (available to a copyright owner without proving actual harm) 
-            can range from $750 - $30,000 per work infringed, and run as high as $150,000 for 
-            willful infringement. Damages vary in other jurisdictions.<br><br>
-            If we are notified that material you have uploaded to the United Memes Platform 
-            infringes someone’s copyright, we will notify you and take down the content you posted. 
-            This is required by law. If you persist in uploading unauthorized content, we will, 
-            pursuant to our Repeat Infringer Policy, ban you from using the United Memes Platform.<br><br>
-
-        </p>
-        </div>
-      </div>
+    
 
     <nav>
 
@@ -77,7 +56,7 @@
                         <span></span>
                     </div>
                 </div>
-                
+
             </div>
 
             <div class="settings-menu-inner">
@@ -90,27 +69,31 @@
                 </div>
                 <hr>
                 <div class="user-profile">
-                    <img src="images/feedback.png">
+
+                    <div class="settings-icon-feedback" id="feedbackIcon">
+                        <!-- <img src="images/feedback.png"> -->
+                    </div>
+
                     <div>
                         <p>Give Feedback</p>
                         <a href="#">Help us to improve the new design</a>
                     </div>
                 </div>
                 <hr>
-                <div class="settings-links">
-                    <img src="images/setting.png" class="settings-icon">
+                <div class="settings-links settings-icon-setting" id="settingIcon">
+                    <!-- <img src="images/setting.png" class="settings-icon"> -->
                     <a href="#">Settings & Privacy <img src="images/arrow.png" width="10px"></a>
                 </div>
-                <div class="settings-links">
-                    <img src="images/help.png" class="settings-icon">
+                <div class="settings-links settings-icon-help" id="helpIcon">
+                    <!-- <img src="images/help.png" > -->
                     <a href="#">Help & Support <img src="images/arrow.png" width="10px"></a>
                 </div>
-                <div class="settings-links">
-                    <img src="images/display.png" class="settings-icon">
+                <div class="settings-links settings-icon-display" id="displayIcon">
+                    <!-- <img src="images/display2.png" class="settings-icon"> -->
                     <a href="#">Display & Accessibility <img src="images/arrow.png" width="10px"></a>
                 </div>
-                <div class="settings-links">
-                    <img src="images/logout.png" class="settings-icon">
+                <div class="settings-links settings-icon-logout" id="logoutIcon">
+                    <!-- <img src="images/logout.png" class="settings-icon"> -->
                     <a href="#">Logout <img src="images/arrow.png" width="10px"></a>
                 </div>
 
@@ -134,20 +117,22 @@
                     </div>
                 </div>
                 <div class="icon-wrapper">
+                    <div class="icon-placeholder-watch icon-placeholder" id="iconPlaceholderWatch">
+                        <p> Watch Memes</p>
+                    </div>
+                </div>
+                <div class="icon-wrapper">
                     <div class="icon-placeholder-friends icon-placeholder" id="iconPlaceholderFriends">
                         <p> Friends</p>
                     </div>
                 </div>
+                
                 <div class="icon-wrapper">
                     <div class="icon-placeholder-group icon-placeholder" id="iconPlaceholderGroup">
                         <p> Group</p>
                     </div>
                 </div>
-                <div class="icon-wrapper">
-                    <div class="icon-placeholder-watch icon-placeholder" id="iconPlaceholderWatch">
-                        <p> Watch Memes</p>
-                    </div>
-                </div>
+               
         
                 <a href="#">See More</a>
             </div>
@@ -802,6 +787,29 @@
 <div class="footer">
     <p>Copyright 2022 - Webdeveloper Oliver Lystlund</p>
 </div>
+
+<div id="modal">
+        
+    <div class="modalcontent">
+      <h1>Terms Of Service</h1>
+      <i id="close" class="close-modal fas fa-times" onclick="closeModal()"></i>
+      <p>
+        If you upload content and you don’t own the copyright and don’t have permission to upload, 
+        reproduce, distribute, publicly perform, 
+        or create a derivative work of that content or any portion of that content, 
+        you may be sued by the copyright owner thereof for copyright infringement.<br><br>
+        The damages for copyright infringement can be severe. In the United States, 
+        statutory damages (available to a copyright owner without proving actual harm) 
+        can range from $750 - $30,000 per work infringed, and run as high as $150,000 for 
+        willful infringement. Damages vary in other jurisdictions.<br><br>
+        If we are notified that material you have uploaded to the United Memes Platform 
+        infringes someone’s copyright, we will notify you and take down the content you posted. 
+        This is required by law. If you persist in uploading unauthorized content, we will, 
+        pursuant to our Repeat Infringer Policy, ban you from using the United Memes Platform.<br><br>
+
+    </p>
+    </div>
+  </div>
 
 <script src="app.js"></script>
 </body>

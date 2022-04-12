@@ -332,6 +332,7 @@ nav {
 }
 
 .imp-links {
+  margin-top: 20px;
   border-bottom: 1px solid #ccc;
 }
 
@@ -632,14 +633,60 @@ nav {
   margin-right: 10px;
   border-radius: 50%;
 }
+.icon-placeholder-group {
+  background-image: url(images/group.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 20px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
+
+
+.settings-icon-feedback{
+  background-image: url(images/feedback2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 38px;
+  height: 38px;
+  margin-right: 15px;
+}
+.settings-icon-setting{
+  background-image: url(images/setting2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+.settings-icon-help{
+  background-image: url(images/help2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+.settings-icon-display{
+  background-image: url(images/display2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+.settings-icon-logout{
+  background-image: url(images/logout2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
 
 .settings-links a {
   display: flex;
   flex: 1;
+  height: 38px;
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
   color: var(--p-color);
+  margin-left: 50px;
 }
 
 /*--------------- darkmode button ---------------*/

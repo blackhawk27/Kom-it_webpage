@@ -10,6 +10,12 @@ let dmImg3 = document.getElementById("iconPlaceholderGroup");
 let dmImg4 = document.getElementById("iconPlaceholderWatch");
 //let logoImg = document.getElementById("logoImg");
 
+let dmImg5 = document.getElementById("settingIcon");
+let dmImg6 = document.getElementById("helpIcon");
+let dmImg7 = document.getElementById("displayIcon");
+let dmImg8 = document.getElementById("logoutIcon");
+let dmImg9 = document.getElementById("feedbackIcon");
+
 
 if (sessionStorage.getItem("modal") === "none") {
   document.getElementById("modal").style.display = "none";
@@ -28,10 +34,21 @@ function changeModeText(){
   
   if(localStorage.getItem("theme") == "dark"){
       modeText.innerHTML = mode[0];
+      dmImg5.style.backgroundImage = "url(images/setting.png)";
+      dmImg6.style.backgroundImage = "url(images/help.png)";
+      dmImg7.style.backgroundImage = "url(images/display.png)";
+      dmImg8.style.backgroundImage = "url(images/logout.png)";
+      dmImg9.style.backgroundImage = "url(images/feedback.png)";
+      
   }
 
   else{
     modeText.innerHTML = mode[1];
+    dmImg5.style.backgroundImage = "url(images/setting2.png)";
+    dmImg6.style.backgroundImage = "url(images/help2.png)";
+    dmImg7.style.backgroundImage = "url(images/display2.png)";
+    dmImg8.style.backgroundImage = "url(images/logout2.png)";
+    dmImg9.style.backgroundImage = "url(images/feedback2.png)";
   }
 }
 // ****************************************************************************************
@@ -75,6 +92,7 @@ darkBtn.onclick = function(){
         dmImg3.style.backgroundImage = "url(images/group.png)";
         dmImg4.style.backgroundImage = "url(images/watch.png)";
         //logoImg.style.backgroundImage = "url(images/logo.png)";
+        
         changeModeText();
         console.log("Dark Mode");
         
