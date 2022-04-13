@@ -123,9 +123,11 @@ nav {
   display: flex;
   position: relative;
   transition: 0.5s;
+  margin-right: 0;
+  margin-left: auto;
 }
 .add-post{
-  margin-right: 5%;
+  margin-right: -5%;
 }
 
 
@@ -145,6 +147,10 @@ nav {
   align-items: center;
 }
 
+.nav-right{
+  width: 500px;
+}
+
 .nav-left ul li {
   list-style: none;
   display: inline-block;
@@ -156,14 +162,16 @@ nav {
 }
 
 .nav-user-icon img {
-  width: 40px;
+  width: 45px;
   border-radius: 50%;
-  margin-top: 5px;
+  margin-top: 0px;
   cursor: pointer;
 }
 
 .nav-user-icon {
   margin-left: 30px;
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .search-box {
@@ -174,6 +182,8 @@ nav {
   align-items: center;
   padding: 0 15px;
   transition: 0.3s;
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .search-box ::placeholder{
@@ -304,11 +314,19 @@ nav {
   width: 100%;
   background: var(--bg-color);
   border-radius: 6px;
-  padding: 20px;
+  padding: 0px;
   color: var(--small-text);
   margin-top: 0px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.3s;
+}
+
+.write-post-container-height{
+  padding: 20px;
+  max-height: 350px;
   margin-bottom: 20px;
-  display: none;
 }
 
 .imp-links a,
@@ -722,7 +740,7 @@ nav {
   position: absolute;
   top: -1px;
   right: -50px;
-  background: #606060;
+  background: #ff0266; /*#ff5a00*/
   width: 45px;
   border-radius: 15px;
   padding: 2px 3px;
@@ -741,7 +759,7 @@ nav {
 
 #dark-btn.dark-btn-on {
   padding-left: 23px;
-  background: #ccc;
+  background: #0077ff;
 }
 
 /*-------------------- Like button ------------------*/

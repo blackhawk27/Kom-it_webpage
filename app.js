@@ -196,13 +196,18 @@ function showCommentInput(){
   }
 }
 
-let addPostBtn = document.getElementById("addPostBtn");
+// let addPostBtn = document.getElementById("addPostBtn");
+
+// function addPost(){
+//   if (addPostBtn.style.display === "none") {
+//     addPostBtn.style.display = "block";
+//   } 
+//   else {
+//     addPostBtn.style.display = "none";
+//   }
+// }
+let addPostBtn = document.querySelector(".write-post-container");
 
 function addPost(){
-  if (addPostBtn.style.display === "none") {
-    addPostBtn.style.display = "block";
-  } 
-  else {
-    addPostBtn.style.display = "none";
-  }
+    addPostBtn.classList.toggle("write-post-container-height");
 }
