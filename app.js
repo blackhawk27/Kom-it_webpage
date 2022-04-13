@@ -207,9 +207,16 @@ function showCommentInput(){
 //   }
 // }
 let addPostBtn = document.querySelector(".write-post-container");
+let clickCount = 1;
 
 function addPost(){
+  clickCount += 1;
     addPostBtn.classList.toggle("write-post-container-height");
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    console.log(clickCount);
+    if(clickCount %2 !== 1){
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+    return clickCount;
 }
