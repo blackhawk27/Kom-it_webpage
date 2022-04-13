@@ -782,12 +782,12 @@ nav {
   color: var(--post-icon-num);
 }
 .post-icon-wrapper :nth-child(2){
-  margin-left: 40px;
+  margin-left: 40%;
   padding-left: 10px;
   color: var(--post-icon-num);
 }
 .post-icon-wrapper :nth-child(3){
-  margin-left: 20px;
+  margin-left: 15%;
   color: var(--post-icon-num);
 }
 
@@ -1001,5 +1001,15 @@ nav {
   }
   .add-post i{
     right: 30px;
+  }
+
+  .post-icon-wrapper :nth-child(2){
+    margin-left: 25%;
+    padding-left: 10px;
+    color: var(--post-icon-num);
+  }
+  .post-icon-wrapper :nth-child(3){
+    margin-left: 10%;
+    color: var(--post-icon-num);
   }
 }
